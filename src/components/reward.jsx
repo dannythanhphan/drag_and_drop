@@ -5,7 +5,7 @@ class Reward extends React.Component {
         super(props);
         this.dragStart = this.dragStart.bind(this);
         this.showButton = this.showButton.bind(this);
-        this.hideButton = this.hideButton.bind(this);
+        // this.hideButton = this.hideButton.bind(this);
         this.deleteReward = this.deleteReward.bind(this);
     }
 
@@ -30,13 +30,13 @@ class Reward extends React.Component {
         }
     }
 
-    hideButton(e) {
-        if (e.currentTarget.parentElement.id > 10) {
-            let buttonId = e.currentTarget.firstElementChild.id
-            let button = document.getElementById(buttonId)
-            button.style.display = "none";
-        }
-    }
+    // hideButton(e) {
+    //     if (e.currentTarget.parentElement.id > 10) {
+    //         let buttonId = e.currentTarget.firstElementChild.id
+    //         let button = document.getElementById(buttonId)
+    //         button.style.display = "none";
+    //     }
+    // }
 
     deleteReward(e) {
         let rewardToDelete = e.target.parentElement.id
@@ -61,7 +61,7 @@ class Reward extends React.Component {
                         onDragStart={this.dragStart}
                         draggable={"true"}
                         onMouseEnter={this.showButton}
-                        onMouseOut={this.hideButton}
+                        // onMouseOut={this.hideButton}
                     >
                         <button 
                             className="delete-button" 
