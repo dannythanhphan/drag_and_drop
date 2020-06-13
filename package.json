@@ -6,8 +6,12 @@
   "directories": {
     "test": "test"
   },
+  "engines": {
+    "node": "12.16.0",
+    "npm": "6.13.4"
+  },
   "scripts": {
-    "start": "webpack --mode=development --watch"
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
